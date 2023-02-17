@@ -309,7 +309,7 @@ SELECT title, branchName, noOfCopies
 		AND branchName = @branchName
 
 --  **********  RESULT  **********  --
- EXEC [dbo].[LibraryInformation] 'The Lost Tribe', 'Sharpstown'
+ EXEC LibraryInformation1 'The Lost Tribe', 'Sharpstown'
 
 
  /******************************************************
@@ -329,7 +329,7 @@ SELECT title, branchName, noOfCopies
 	WHERE title = @title
 
 --  **********  RESULT  **********  --
-EXEC [dbo].[LibraryInformation1] 'The Lost Tribe'
+EXEC LibraryInformation2 'The Lost Tribe'
  
 
  /******************************************************
@@ -348,7 +348,7 @@ SELECT *
 	WHERE borrower.cardNo NOT IN (bookLoans.cardNo)
 
 --  **********  RESULT  **********  --
-EXEC [dbo].[LibraryInformation3]
+EXEC LibraryInformation3
 
 
 
@@ -375,7 +375,7 @@ SELECT branchName, title, name, borrower.address, dueDate
 		AND dueDate = @dueDate
 
 --  **********  RESULT  **********  --
-EXEC [dbo].[LibraryInformation4] 'Sharpstown', '2018-02-19'
+EXEC LibraryInformation4 'Sharpstown', '2018-02-19'
 
 
 
@@ -394,7 +394,7 @@ EXEC [dbo].[LibraryInformation4] 'Sharpstown', '2018-02-19'
 	GROUP BY branchName
 
 --  **********  RESULT  **********  --
-EXEC [dbo].[LibraryInformation5]
+EXEC LibraryInformation5
 
 
 
@@ -414,7 +414,7 @@ EXEC [dbo].[LibraryInformation5]
 	HAVING COUNT(bookLoans.cardNo) > 5
 
 --  **********  RESULT  **********  --
-EXEC [dbo].[LibraryInformation6]
+EXEC LibraryInformation6
 */
 
 
@@ -442,7 +442,7 @@ copies owned by the library branch whose name is
 	GROUP BY title, branchName
 
 --  **********  RESULT  **********  --
-EXEC [dbo].[LibraryInformation7] 'Stephen King', 'Central'
+EXEC LibraryInformation7 'Stephen King', 'Central'
 
 
 
