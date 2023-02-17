@@ -294,7 +294,7 @@ GO
   whose name is "Sharpstown"?
  ******************************************************/
 
-/*CREATE PROCEDURE LibraryInformation1
+CREATE PROCEDURE LibraryInformation1
 	@title varchar(50),
 	@branchName varchar(50)
 AS
